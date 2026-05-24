@@ -113,7 +113,7 @@ function SidebarContent({ collapsed = false }: { collapsed?: boolean }) {
           if (collapsed) {
             return (
               <Tooltip key={item.href}>
-                <TooltipTrigger asChild>{linkContent}</TooltipTrigger>
+                <TooltipTrigger render={linkContent} />
                 <TooltipContent side="right">{item.label}</TooltipContent>
               </Tooltip>
             );
@@ -159,7 +159,7 @@ function SidebarContent({ collapsed = false }: { collapsed?: boolean }) {
 
         {collapsed ? (
           <Tooltip>
-            <TooltipTrigger asChild>
+            <TooltipTrigger render={
               <Button
                 id="sidebar-logout"
                 variant="ghost"
@@ -169,7 +169,7 @@ function SidebarContent({ collapsed = false }: { collapsed?: boolean }) {
               >
                 <LogOut className="h-5 w-5" />
               </Button>
-            </TooltipTrigger>
+            } />
             <TooltipContent side="right">Logout</TooltipContent>
           </Tooltip>
         ) : (

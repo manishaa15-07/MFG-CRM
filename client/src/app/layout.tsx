@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ReduxProvider>
           <ThemeWrapper>
-            <TooltipProvider delayDuration={300}>
+            <TooltipProvider delay={300}>
               {children}
               <Toaster richColors position="top-right" />
             </TooltipProvider>
